@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android-2</string>
+    <string name="teretulemast_t_ll_kehitell_n_sulle_ihan_oma_vappunimi">Teretulemast! Täällä kehitellään sulle ihan oma vappunimi!</string>
+    <string name="kerro_nimesi">Kerro nimesi:</string>
+    <string name="kerro_syntym_kuukautesi">Kerro syntymäkuukautesi:</string>
+    <string name="paina_t_st_niin_tapahtuu_taikaa">Paina tästä niin tapahtuu taikaa</string>
+    <string name="vappu_nimesi_on">Vappu nimesi on:</string>
+</resources>
