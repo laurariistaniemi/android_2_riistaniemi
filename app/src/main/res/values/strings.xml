@@ -5,4 +5,6 @@
     <string name="kerro_syntym_kuukautesi">Kerro syntymäkuukautesi:</string>
     <string name="paina_t_st_niin_tapahtuu_taikaa">Paina tästä niin tapahtuu taikaa</string>
     <string name="vappu_nimesi_on">Vappu nimesi on:</string>
+    <string name="kerro_nimesi1">Kerro nimesi</string>
+    <string name="kerro_syntym_kuukautesi1">Kerro syntymäkuukautesi</string>
 </resources>

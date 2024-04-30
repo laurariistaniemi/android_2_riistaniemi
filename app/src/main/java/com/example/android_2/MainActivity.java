@@ -16,7 +16,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,21 +34,47 @@ public class MainActivity extends AppCompatActivity  {
         });
 
 
-        Button button = (Button) findViewById(R.id.button);
-        //button.setOnClickListener(v -> UpdateResults());
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
     }
 
     public void ButtonPress(View v) {
         //TextView tvResults_Text = (TextView) findViewById(R.id.tvResults_Text);
 
-    }
+        Button button = (Button) findViewById(R.id.button);
+        //button.setOnClickListener(v -> UpdateResults());
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UpdateResults();
+                //TextView tvResults_Text = findViewById(R.id.tvResults_Text);
+                //tvResults_Text.getText();
 
+
+                }
+        });}
+
+
+    public void UpdateResults() {
+        try {
+            EditText tvInput_Name = findViewById(R.id.tvInput_Name);
+            EditText tvInput_Month = findViewById(R.id.tvInput_Month);
+            TextView tvName = findViewById(R.id.tvName);
+            TextView tvMonth = findViewById(R.id.tvMonth);
+            TextView tvResults_Text = findViewById(R.id.tvResults_Text);
+            TextView tvNew_name = findViewById(R.id.tvNew_Name);
+
+            //String strInput_Name = getString(R.string.kerro_nimesi);
+            //String strInput_Month = getString(R.string.kerro_syntym_kuukautesi);
+            String strResults = "VAPPU" + tvInput_Name.getText().toString(); //+ tvInput_Month.getText().toString();
+            //EditText tvResults_Text = strResults.toString();
+            //tvResults_Text += strResults;
+            tvNew_name.append(strResults);
+            tvNew_name.setText(strResults);
+            //EditText tvResults_Text = strResults.getText().getString();
+
+        } catch (NumberFormatException e) {
+            return;
+        }
+    }
         //final EditText tvInput_Name = (EditText) findViewById(R.id.tvInput_Name);
         //final EditText tvInput_Month = (EditText) findViewById(R.id.tvInput_Month);
         //final String strResults = (String) findViewById(R.id.tvResults_Text);
@@ -68,37 +95,20 @@ public class MainActivity extends AppCompatActivity  {
         }
 
         @Override
-        public void afterTextChanged(Editable s) {
+        public void afterTextChanged(Editable s) { UpdateResults();
         }
 
-
-        public void UpdateResults() {
-            try {
-                EditText tvInput_Name = findViewById(R.id.tvInput_Name);
-                EditText tvInput_Month = findViewById(R.id.tvInput_Month);
-                EditText tvResults_Text = findViewById(R.id.tvResults_Text);
-
-
-                //String strInput_Name = getString(R.string.kerro_nimesi);
-                //String strInput_Month = getString(R.string.kerro_syntym_kuukautesi);
-                String strResults = tvInput_Name.getText().toString() + tvInput_Month.getText().toString();
-                //EditText tvResults_Text = strResults.toString();
-                //tvResults_Text += strResults;
-                tvResults_Text.setText(strResults);
-                //EditText tvResults_Text = strResults.getText().getString();
-
-            } catch (NumberFormatException e) {
-                return;
-            }
-        }
 
     }
+    /*
     public class TextChangeImpl extends TextChange {
         @Override
         public void UpdateResults() {
             super.UpdateResults();
         }
     }
+
+     */
 
 
 
